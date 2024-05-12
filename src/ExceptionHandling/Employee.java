@@ -9,18 +9,28 @@ public class Employee {
 		System.out.println("A");
 		
 		try {
+		    Employee obj = new Employee();
+		    obj = null;
+		    obj.name = "Naveen";//NPE
 		    int i = 9/0;
+		System.out.println("hello");
 		}
-		catch(Exception e) {
-			
-			System.out.println("AE is Coming ...");
-			e.printStackTrace();
-        }
-		
-		System.out.println("Bye");
 
 		
+		catch(NullPointerException e) {	
+			e.printStackTrace();
+		}
+			
+		catch(ArithmeticException e) {
+			e.printStackTrace();
+                }
+		
+                System.out.println("hello");
+
+		System.out.println("Bye");
+	
+             
 	
 	}
 
-}
+  }
